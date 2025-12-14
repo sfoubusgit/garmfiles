@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@300;400;500&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+  /* Colors */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gray-low: #D9D9D9;
+  --color-gray-mid: #C4C4C4;
+  --color-gray-dark: #7A7A7A;
+  --color-accent: #7ED957; /* Retro Green - vintage approved */
+  
+  /* Typography */
+  --font-headline: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-label: 'Space Grotesk', sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+  
+  /* Borders */
+  --border-thin: 1px solid var(--color-gray-low);
+  --border-accent: 1px solid var(--color-accent);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+h1 {
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+p, span, div {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+label, .label {
+  font-family: var(--font-label);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* Vintage texture effects */
+.vintage-texture {
+  position: relative;
+}
+
+.vintage-texture::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.01) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(0, 0, 0, 0.01) 3px
+    );
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* Vintage image filter */
+.vintage-image {
+  filter: contrast(0.95) brightness(1.05) saturate(0.9);
+  position: relative;
+}
+
+.vintage-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.02) 100%);
+  pointer-events: none;
+}
+
+/* Buttons */
+.btn {
+  font-family: var(--font-label);
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border: var(--border-thin);
+  background: var(--color-black);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  display: inline-block;
+  letter-spacing: 0.05em;
+}
+
+.btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn-accent {
+  background: var(--color-black);
+  border: var(--border-accent);
+  color: var(--color-accent);
+}
+
+.btn-accent:hover {
+  background: var(--color-accent);
+  color: var(--color-black);
+}
+
+.btn-white {
+  background: var(--color-white);
+  color: var(--color-black);
+  border: var(--border-thin);
+}
+
+.btn-white:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* Links */
+a {
+  color: var(--color-black);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Utility classes */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+

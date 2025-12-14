@@ -1,0 +1,74 @@
+.account-page {
+  padding: var(--spacing-xl) 0;
+}
+
+.account-content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.account-tabs {
+  display: flex;
+  border-bottom: var(--border-thin);
+  margin-bottom: var(--spacing-lg);
+}
+
+.account-tabs button {
+  flex: 1;
+  padding: var(--spacing-md);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.account-tabs button.active {
+  border-bottom-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.account-form {
+  border: var(--border-thin);
+  padding: var(--spacing-md);
+}
+
+.account-form h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.account-form .form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.account-form label {
+  display: block;
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.account-form input {
+  width: 100%;
+  padding: 0.75rem;
+  border: var(--border-thin);
+  font-family: var(--font-body);
+  background: var(--color-white);
+  font-size: 1rem;
+}
+
+.account-form input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.btn-full {
+  width: 100%;
+}
+

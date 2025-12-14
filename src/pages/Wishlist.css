@@ -1,0 +1,14 @@
+.wishlist-page {
+  padding: var(--spacing-xl) 0;
+}
+
+.empty-wishlist {
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+}
+
+.empty-wishlist p {
+  font-size: 1.2rem;
+  color: var(--color-gray-dark);
+}
+

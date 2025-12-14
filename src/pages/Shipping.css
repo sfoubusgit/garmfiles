@@ -1,0 +1,49 @@
+.shipping-page {
+  padding: var(--spacing-xl) 0;
+}
+
+.shipping-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.shipping-section {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: var(--border-thin);
+}
+
+.shipping-section:last-child {
+  border-bottom: none;
+}
+
+.shipping-section h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.shipping-section h3 {
+  font-size: 1.3rem;
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 700;
+}
+
+.shipping-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-sm);
+}
+
+.shipping-section ul,
+.shipping-section ol {
+  margin-left: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+.shipping-section li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+

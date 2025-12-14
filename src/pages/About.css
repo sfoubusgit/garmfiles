@@ -1,0 +1,51 @@
+.about-page {
+  padding: var(--spacing-xl) 0;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: var(--border-thin);
+}
+
+.about-section:last-child {
+  border-bottom: none;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-black);
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-section li {
+  padding: var(--spacing-sm) 0;
+  padding-left: var(--spacing-md);
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-section li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+

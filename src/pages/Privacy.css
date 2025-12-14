@@ -1,0 +1,58 @@
+.privacy-page,
+.terms-page,
+.impressum-page {
+  padding: var(--spacing-xl) 0;
+}
+
+.privacy-content,
+.terms-content,
+.impressum-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.privacy-content section,
+.terms-content section,
+.impressum-content section {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: var(--border-thin);
+}
+
+.privacy-content section:last-child,
+.terms-content section:last-child,
+.impressum-content section:last-child {
+  border-bottom: none;
+}
+
+.privacy-content h2,
+.terms-content h2,
+.impressum-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+  font-weight: 700;
+}
+
+.privacy-content p,
+.terms-content p,
+.impressum-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-sm);
+}
+
+.privacy-content ul,
+.terms-content ul,
+.impressum-content ul {
+  margin-left: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+.privacy-content li,
+.terms-content li,
+.impressum-content li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+

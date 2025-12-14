@@ -1,0 +1,66 @@
+.lookbook-page {
+  padding: var(--spacing-xl) 0;
+}
+
+.lookbook-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-gray-dark);
+  margin-bottom: var(--spacing-xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lookbook-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.lookbook-item {
+  position: relative;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  border: var(--border-thin);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.lookbook-item:hover {
+  border-color: var(--color-accent);
+}
+
+.lookbook-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lookbook-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: var(--spacing-md);
+  transform: translateY(100%);
+  transition: transform var(--transition-normal);
+}
+
+.lookbook-item:hover .lookbook-overlay {
+  transform: translateY(0);
+}
+
+.lookbook-overlay h3 {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .lookbook-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
