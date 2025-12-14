@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { copyFileSync } from 'fs'
+import { copyFileSync, readFileSync, writeFileSync } from 'fs'
 import { join } from 'path'
 
 // GitHub Pages base path configuration
@@ -19,6 +19,8 @@ const getBasePath = () => {
 }
 
 // Plugin to copy index.html to 404.html for GitHub Pages SPA routing
+// When GitHub Pages serves 404.html, it will load the React app,
+// and React Router (with basename) will handle the routing
 const copy404Plugin = () => {
   return {
     name: 'copy-404',
@@ -27,8 +29,10 @@ const copy404Plugin = () => {
       const indexPath = join(outDir, 'index.html')
       const notFoundPath = join(outDir, '404.html')
       try {
+        // Simply copy index.html to 404.html
+        // React Router with basename will handle the routing
         copyFileSync(indexPath, notFoundPath)
-        console.log('✓ Copied index.html to 404.html for GitHub Pages')
+        console.log('✓ Copied index.html to 404.html for GitHub Pages SPA routing')
       } catch (err) {
         console.warn('Could not copy index.html to 404.html:', err)
       }

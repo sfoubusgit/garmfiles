@@ -8,6 +8,7 @@
     "build:gh-pages": "cross-env GITHUB_PAGES=true npx vite build",
     "preview": "npx vite preview",
     "preview:dist": "npx vite preview --outDir dist",
+    "test:gh-pages": "npx http-server dist -p 8080",
     "deploy": "npm run build:gh-pages"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.2.1",
     "cross-env": "^7.0.3",
+    "http-server": "^14.1.1",
     "vite": "^5.0.8"
   }
 }

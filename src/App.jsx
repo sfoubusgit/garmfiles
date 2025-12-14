@@ -21,8 +21,11 @@ import NotFound from './pages/NotFound';
 import './App.css';
 
 function App() {
+  // Get base path from environment or use default
+  const basePath = import.meta.env.BASE_URL || '/garmfiles/';
+  
   return (
-    <Router>
+    <Router basename={basePath}>
       <div className="App">
         <Header />
         <main className="main-content">
